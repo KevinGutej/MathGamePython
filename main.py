@@ -1,6 +1,13 @@
 import turtle
 import sys
+import random
 
+questions = {
+    "2+2": 4,
+    "3+3": 6,
+    "1+1": 2,
+    "4+4": 8
+}
 turtle.color('black')
 style = ('Arial', 30, 'italic')
 turtle.hideturtle()
@@ -14,59 +21,74 @@ def Loose():
 
 Kevin = turtle.Pen()
 Kevin.up()
-print("What is 2 + 2?")
-question1 = int(sys.stdin.readline())
-if question1 == 4:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
+# print("What is 2 + 2?")
+# question1 = int(sys.stdin.readline())
+# if question1 == 4:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
+# Win()
+# Loose()
+#
+# print("What is 10 - 5?")
+# question2 = int(sys.stdin.readline())
+# if question2 == 5:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
+# Win()
+# Loose()
+#
+# print("What is 2 * 12?")
+# question3 = int(sys.stdin.readline())
+# if question3 == 24:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
+# Win()
+# Loose()
+#
+# # print("What is 6 / 2?")
+# question4 = int(sys.stdin.readline())
+# if question4 == 3:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
+# Win()
+# Loose()
+#
+# # print("What is 9 - 3?")
+# question5 = int(sys.stdin.readline())
+# if question5 == 6:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
+# Win()
+# Loose()
+#
+# # print("What is 44 - 11?")
+# question6 = int(sys.stdin.readline())
+# if question6 == 33:
+#     Kevin.forward(90)
+# else:
+#     Kevin.backward(90)
 
-print("What is 10 - 5?")
-question2 = int(sys.stdin.readline())
-if question2 == 5:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
 
-print("What is 2 * 12?")
-question3 = int(sys.stdin.readline())
-if question3 == 24:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
+while (Kevin.position() != (540.00,0.00) or Kevin.position() != (-540.00,0.00)):
+    key = random.choice(list(questions))
+    print(key)
+    answer = int(sys.stdin.readline())
+    if answer == questions[key]:
+        Kevin.forward(90)
+    else:
+        Kevin.backward(90)
+    Win()
+    Loose()
+    #print(Kevin.position())
 
-print("What is 6 / 2?")
-question4 = int(sys.stdin.readline())
-if question4 == 3:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
-
-print("What is 9 - 3?")
-question5 = int(sys.stdin.readline())
-if question5 == 6:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
-
-print("What is 44 - 11?")
-question6 = int(sys.stdin.readline())
-if question6 == 33:
-    Kevin.forward(90)
-else:
-    Kevin.backward(90)
-Win()
-Loose()
-
-print(Kevin.position())
 turtle.mainloop()
+
+
+
+
+
