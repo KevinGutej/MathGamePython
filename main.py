@@ -36,94 +36,39 @@ turtle.color('black')
 style = ('Arial', 30, 'italic')
 turtle.hideturtle()
 
-# turtle.setup(800, 800)
-# turtle.bgpic("PythonPitch.jpg")
-
-#turtle.bgcolor("lightgreen") #This is to set the bg any color you want
-
-# turtle.addshape("rocketship.png")
-# turtle.shape("rocketship.png")
-
-# turtle.addshape(image)
-# turtle.shape(image)
-
-# turtle.bgpic('image1.gif')
-
+screen = turtle.Screen()
+screen.setup(626, 420)
+screen.title("Kevin Football  !")
+turtle.bgpic("pitch.gif")
 
 def Win():
-    if Kevin.position() == (540.00,0.00):
+    if Kevin.position() == (270.00,0.00):
+        turtle.bgpic("")
+        screen.update()
+        turtle.bgcolor("green")
         turtle.write('Win!', font=style, align='center')
 def Loose():
-    if Kevin.position() == (-540.00,0.00):
-        turtle.write('Loose!', font=style, align='center')
+    if Kevin.position() == (-270.00,0.00):
+        turtle.bgpic("")
+        screen.update()
+        turtle.bgcolor("red")
+        turtle.write('LOSER!', font=style, align='center')
 
 Kevin = turtle.Pen()
 Kevin.up()
-# print("What is 2 + 2?")
-# question1 = int(sys.stdin.readline())
-# if question1 == 4:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
-# Win()
-# Loose()
-#
-# print("What is 10 - 5?")
-# question2 = int(sys.stdin.readline())
-# if question2 == 5:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
-# Win()
-# Loose()
-#
-# print("What is 2 * 12?")
-# question3 = int(sys.stdin.readline())
-# if question3 == 24:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
-# Win()
-# Loose()
-#
-# # print("What is 6 / 2?")
-# question4 = int(sys.stdin.readline())
-# if question4 == 3:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
-# Win()
-# Loose()
-#
-# # print("What is 9 - 3?")
-# question5 = int(sys.stdin.readline())
-# if question5 == 6:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
-# Win()
-# Loose()
-#
-# # print("What is 44 - 11?")
-# question6 = int(sys.stdin.readline())
-# if question6 == 33:
-#     Kevin.forward(90)
-# else:
-#     Kevin.backward(90)
 
-
-while (Kevin.position() != (540.00,0.00) or Kevin.position() != (-540.00,0.00)):
+while (Kevin.position() != (270.00,0.00) or Kevin.position() != (-270.00,0.00)):
     key = random.choice(list(questions))
     print(key)
     answer = str(sys.stdin.readline())
     if answer.lower() == questions[key].lower():
         Kevin.forward(90)
+        print("Great!")
     else:
         Kevin.backward(90)
+        print("Wrong")
     Win()
     Loose()
-    #print(Kevin.position())
-
 turtle.mainloop()
 
 
