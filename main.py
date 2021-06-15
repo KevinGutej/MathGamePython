@@ -3,14 +3,52 @@ import sys
 import random
 
 questions = {
-    "2+2": 4,
-    "3+3": 6,
-    "1+1": 2,
-    "4+4": 8
+    'Where does Cristiano ronaldo play?' : 'Real Madrid\n',
+    'Where does Lionel Messi play?' : 'Barcelonda\n',
+    'Where does Neymar play?' : 'PSG\n',
+    'Where does Kylian Mbappé  play?' : 'PSG\n',
+    'Where does Zlatan Ibrahimović play? ' : 'PSG\n',
+    'Where does Paul Pogba play?' : 'Manchester United\n',
+    'Where does Gareth Bale play?' : 'Real Madrid\n',
+    'Where does Robert Lewandowski play?' :'Bayern Munich\n',
+    'Where does Eden Hazard play?' : 'Real Madrid\n',
+    'Where does Sergio Agüero play? ' : 'Man City\n',
+    'Where does Sadio Mané play?' : 'Liverpool\n',
+    'Where does Jamie Vardy play?' : 'Leicester City\n',
+    'Where does Kevin De Bruyne play?' : 'Man city\n',
+    'Who is Chelseas GoalKeeper?' : 'Kepa\n',
+    'Whos the best Chelsea Midfielder?' : 'KANTE!\n',
+    'What animal has a long neck?' : 'Giraffee\n',
+    'Where does Mohamed Salah play?' : 'Liverpool\n',
+    'Where does Lingard play?' : 'ManchesterCity\n',
+    'What position does Virgil van Dijk play?' : 'Defender\n',
+    'What position does Karim Benzema play?' : 'Striker\n',
+    'What position does Manuel Neuer play?': 'GoalKeeper\n',
+    'Where does Tony Kroos play?': 'RealMadrid\n',
+    'What position does Peter Schmeichel play?': 'GoalKeeper\n',
+    'What position does Son play?': 'Midfielder\n',
+    'What position does Petr Cech play?': 'GoalKeeper\n'
 }
+# turtle.bgpic("PythonPitch.jpg")
+
+
 turtle.color('black')
 style = ('Arial', 30, 'italic')
 turtle.hideturtle()
+
+# turtle.setup(800, 800)
+# turtle.bgpic("PythonPitch.jpg")
+
+#turtle.bgcolor("lightgreen") #This is to set the bg any color you want
+
+# turtle.addshape("rocketship.png")
+# turtle.shape("rocketship.png")
+
+# turtle.addshape(image)
+# turtle.shape(image)
+
+# turtle.bgpic('image1.gif')
+
 
 def Win():
     if Kevin.position() == (540.00,0.00):
@@ -77,8 +115,8 @@ Kevin.up()
 while (Kevin.position() != (540.00,0.00) or Kevin.position() != (-540.00,0.00)):
     key = random.choice(list(questions))
     print(key)
-    answer = int(sys.stdin.readline())
-    if answer == questions[key]:
+    answer = str(sys.stdin.readline())
+    if answer.lower() == questions[key].lower():
         Kevin.forward(90)
     else:
         Kevin.backward(90)
