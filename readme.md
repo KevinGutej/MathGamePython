@@ -6,11 +6,11 @@ You have to download zip or run:
 ```bash
 git clone
 ```
+
 ##Game Interface
 ![Image of Football pitch](pitch.gif)
 
 ##Questions
-
 Below you can find available questions in the game.
 
 ```python
