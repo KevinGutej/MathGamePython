@@ -1,16 +1,16 @@
-# Football Game
+<h1>Football Game</h1> 
 
 Football Game is a simple quiz game made in Python, using Turtle Module.
-## Installation
+<h2>Installation</h2>
 You have to download zip or run:
 ```bash
 git clone
 ```
 
-##Game Interface
+<h2>Game Interface</h2>
 ![Image of Football pitch](pitch.gif)
 
-##Questions
+<h2>Questions</h2>
 Below you can find available questions in the game.
 
 ```python
@@ -42,5 +42,5 @@ questions = {
     'What position does Petr Cech play?': 'GoalKeeper'
 }
 ```
-##License
+<h2>License</h2>
 [MIT](https://choosealicense.com/licenses/mit/)
