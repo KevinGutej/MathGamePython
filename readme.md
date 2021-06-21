@@ -8,7 +8,7 @@ git clone
 ```
 
 <h2>Game Interface</h2>
-![Image of Football pitch](pitch.gif)
+<img src="Pitch2.jpg" alt="Screen from game">
 
 <h2>Questions</h2>
 Below you can find available questions in the game.
